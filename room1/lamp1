@@ -103,7 +103,7 @@ try:
 
         time.sleep(0.05)
 
-except:
+except:  #simple error handling
     if VERBOSE:
         print('Error !!!')
         print('Something in main loop is wrong')
