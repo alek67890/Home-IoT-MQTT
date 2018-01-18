@@ -70,7 +70,7 @@ mqttc.user_data_set(state_of_lamp)
 # Connect with MQTT Broker
 mqttc.connect(MQTT_BROKER, MQTT_PORT, MQTT_KEEPALIVE_INTERVAL)
 mqttc.loop_start()
-old_input_SWITCH = GPIO.input(BUTTON)
+old_input_SWITCH = GPIO.input(SWITCH)
 start_time = [time.strftime("%H:%M:%S")]
 
 try:
@@ -103,7 +103,7 @@ try:
 
         time.sleep(0.05)
 
-except:  #simple error handling
+except:
     if VERBOSE:
         print('Error !!!')
         print('Something in main loop is wrong')
