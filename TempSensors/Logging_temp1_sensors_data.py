@@ -3,9 +3,9 @@
 
 import csv
 import paho.mqtt.client as mqtt
-import time
-import threading
-from time import strftime,gmtime
+#import time
+#import threading
+from time import strftime,gmtime,sleep
 
 # Define Variables
 MQTT_BROKER = "localhost"
@@ -82,7 +82,7 @@ def save_to_file(txt):
 #
 #     def run(self):
 #         while 1:
-#             time.sleep(self.sleep)
+#             sleep(self.sleep)
 #             apply(self.func, self.params)
 
 
@@ -121,8 +121,8 @@ while True:
     # int(strftime("%S", gmtime())) == 0 and
     if (int(strftime("%M", gmtime())) % 10) == 0:
         save_step(objectTemp)
-        time.sleep(60)
-    time.sleep(0.2)
+        sleep(60)
+    sleep(0.2)
 
 
 
